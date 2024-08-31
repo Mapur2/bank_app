@@ -104,6 +104,8 @@ public class DeleteAC extends Frame {
             st=con.createStatement();
             st.executeUpdate("delete from login where user_id='"+users[i]+"';");
             st=con.createStatement();
+            st.executeUpdate("delete from transaction where user_id='"+users[i]+"';");
+            st=con.createStatement();
             st.executeUpdate("commit;");
             showError("Successfully deleted user with id "+users[i]);
         }
